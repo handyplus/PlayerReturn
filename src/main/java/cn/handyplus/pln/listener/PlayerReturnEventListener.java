@@ -1,7 +1,7 @@
 package cn.handyplus.pln.listener;
 
 import cn.handyplus.lib.annotation.HandyListener;
-import cn.handyplus.lib.expand.adapter.HandySchedulerUtil;
+import cn.handyplus.lib.internal.HandySchedulerUtil;
 import cn.handyplus.pln.enter.ReturnPlayerTime;
 import cn.handyplus.pln.event.PlayerReturnEvent;
 import cn.handyplus.pln.hook.PlayerTaskUtil;

@@ -1,7 +1,7 @@
 package cn.handyplus.pln.listener;
 
 import cn.handyplus.lib.annotation.HandyListener;
-import cn.handyplus.lib.expand.adapter.HandySchedulerUtil;
+import cn.handyplus.lib.internal.HandySchedulerUtil;
 import cn.handyplus.pln.service.ReturnPlayerInfoService;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

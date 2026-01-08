@@ -2,7 +2,7 @@ package cn.handyplus.pln.util;
 
 import cn.handyplus.lib.core.CollUtil;
 import cn.handyplus.lib.core.StrUtil;
-import cn.handyplus.lib.expand.adapter.PlayerSchedulerUtil;
+import cn.handyplus.lib.internal.PlayerSchedulerUtil;
 import cn.handyplus.lib.util.BaseUtil;
 import cn.handyplus.lib.util.RgbTextUtil;
 import cn.handyplus.pln.constants.ReturnConstants;

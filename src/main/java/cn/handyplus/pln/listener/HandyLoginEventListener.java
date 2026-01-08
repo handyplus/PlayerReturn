@@ -2,7 +2,8 @@ package cn.handyplus.pln.listener;
 
 import cn.handyplus.lib.annotation.HandyListener;
 import cn.handyplus.lib.constants.BaseConstants;
-import cn.handyplus.lib.expand.adapter.HandySchedulerUtil;
+import cn.handyplus.lib.internal.HandyLoginEvent;
+import cn.handyplus.lib.internal.HandySchedulerUtil;
 import cn.handyplus.lib.util.HandyHttpUtil;
 import cn.handyplus.pln.PlayerReturn;
 import cn.handyplus.pln.api.PlayerReturnApi;
@@ -11,7 +12,6 @@ import cn.handyplus.pln.enter.ReturnPlayerTime;
 import cn.handyplus.pln.event.PlayerReturnEvent;
 import cn.handyplus.pln.service.ReturnPlayerInfoService;
 import cn.handyplus.pln.service.ReturnPlayerTimeService;
-import cn.handyplus.pln.util.ConfigUtil;
 import cn.handyplus.pln.util.ReturnUtil;
 import fr.xephi.authme.api.v3.AuthMeApi;
 import org.bukkit.Bukkit;
@@ -19,7 +19,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -32,7 +31,7 @@ import java.util.Optional;
  * @author handy
  */
 @HandyListener
-public class PlayerJoinEventListener implements Listener {
+public class HandyLoginEventListener implements Listener {
 
     /**
      * 玩家进入
@@ -40,7 +39,7 @@ public class PlayerJoinEventListener implements Listener {
      * @param event 事件
      */
     @EventHandler(priority = EventPriority.LOWEST)
-    public void onJoin(PlayerJoinEvent event) {
+    public void onJoin(HandyLoginEvent event) {
         Player player = event.getPlayer();
         // 先设置登陆时间
         this.setLastJoin(player);
@@ -53,12 +52,12 @@ public class PlayerJoinEventListener implements Listener {
     }
 
     /**
-     * op进入服务器发送更新提醒
+     * op 进入服务器发送更新提醒
      *
      * @param event 事件
      */
     @EventHandler(priority = EventPriority.HIGHEST)
-    public void onOpPlayerJoin(PlayerJoinEvent event) {
+    public void onOpPlayerJoin(HandyLoginEvent event) {
         HandyHttpUtil.checkVersion(event.getPlayer());
     }
 

@@ -2,7 +2,7 @@ package cn.handyplus.pln;
 
 import cn.handyplus.lib.InitApi;
 import cn.handyplus.lib.constants.HookPluginEnum;
-import cn.handyplus.lib.util.BaseUtil;
+import cn.handyplus.lib.util.HookPluginUtil;
 import cn.handyplus.lib.util.MessageUtil;
 import cn.handyplus.pln.hook.PlaceholderUtil;
 import cn.handyplus.pln.listener.PlayerTaskScheduleEventListener;
@@ -30,16 +30,16 @@ public class PlayerReturn extends JavaPlugin {
         InitApi initApi = InitApi.getInstance(this);
         // 加载配置文件
         ConfigUtil.init();
-        // 加载PlaceholderApi
-        USE_PAPI = BaseUtil.hook(HookPluginEnum.PLACEHOLDER_API);
+        // 加载 PlaceholderApi
+        USE_PAPI = HookPluginUtil.hook(HookPluginEnum.PLACEHOLDER_API);
         if (USE_PAPI) {
             new PlaceholderUtil(this).register();
         }
-        // 加载PlayerTask
-        USE_TASK = BaseUtil.hook(HookPluginEnum.PLAYER_TASK);
-        // 加载authme
-        USE_AUTH_ME = BaseUtil.hook(HookPluginEnum.AUTH_ME);
-        // 查询是否开启plk系统
+        // 加载 PlayerTask
+        USE_TASK = HookPluginUtil.hook(HookPluginEnum.PLAYER_TASK);
+        // 加载 authme
+        USE_AUTH_ME = HookPluginUtil.hook(HookPluginEnum.AUTH_ME);
+        // 查询是否开启 plk系统
         List<String> classList = new ArrayList<>();
         if (!USE_TASK) {
             classList.add(PlayerTaskScheduleEventListener.class.getName());
