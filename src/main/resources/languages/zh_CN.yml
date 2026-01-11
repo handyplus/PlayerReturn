@@ -4,15 +4,15 @@ noPermission: "&8[&c✘&8] &7你没有权限执行此命令"
 # 重载插件提醒
 reloadMsg: "&8[&a✔&8] &7插件重载完毕"
 
-# placeholderAPI提醒
+# placeholderAPI 提醒
 placeholderAPISucceedMsg: "&a已成功加载placeholderApi"
 placeholderAPIFailureMsg: "&7你的服务端没有安装PlaceholderApi哦 未启用自定义变量功能."
 
-# playerTask提醒
+# playerTask 提醒
 playerTaskSucceedMsg: "&a已成功加载playerTask 启用回归任务功能."
 playerTaskFailureMsg: "&7你的服务端没有安装playerTask 未启用回归任务功能."
 
-# authme提醒
+# authme 提醒
 authmeSucceedMsg: "&a已成功加载authme 自动兼容登陆数据."
 authmeFailureMsg: "&7你的服务端没有安装authme 不自动兼容登陆数据."
 
