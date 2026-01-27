@@ -1,7 +1,7 @@
 package cn.handyplus.pln.command.admin;
 
 import cn.handyplus.lib.command.IHandyCommandEvent;
-import cn.handyplus.lib.internal.HandySchedulerUtil;
+import cn.handyplus.lib.internal.PlayerSchedulerUtil;
 import cn.handyplus.lib.util.AssertUtil;
 import cn.handyplus.lib.util.BaseUtil;
 import cn.handyplus.pln.inventory.ViewReturnGui;
@@ -53,7 +53,7 @@ public class ViewCommand implements IHandyCommandEvent {
         if (inventory == null) {
             return;
         }
-        HandySchedulerUtil.runTask(() -> player.openInventory(inventory));
+        PlayerSchedulerUtil.syncOpenInventory(player, inventory);
     }
 
 }

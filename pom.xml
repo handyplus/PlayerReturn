@@ -6,7 +6,7 @@
 
     <groupId>cn.handyplus.pln</groupId>
     <artifactId>PlayerReturn</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <description>一个有点好用的玩家回归插件</description>
 
     <properties>
@@ -14,7 +14,7 @@
         <spigot-api.vesion>1.21.11-R0.1-SNAPSHOT</spigot-api.vesion>
         <lombok.version>1.18.38</lombok.version>
         <annotations.version>26.0.2</annotations.version>
-        <HandyLib.version>3.31.5</HandyLib.version>
+        <HandyLib.version>3.31.9</HandyLib.version>
         <PlayerTask.verison>2.8.0</PlayerTask.verison>
         <authme.verison>5.7.0</authme.verison>
         <placeholderapi.version>2.11.7</placeholderapi.version>
