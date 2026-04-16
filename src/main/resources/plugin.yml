@@ -1,10 +1,10 @@
 name: PlayerReturn
 main: cn.handyplus.pln.PlayerReturn
-version: 1.0.9
+version: 1.1.0
 author: handy
 api-version: 1.13
 website: https://ricedoc.handyplus.cn/wiki/PlayerReturn/log/
-softdepend: [ PlaceholderAPI,PlayerTask,AuthMe,CatSeedLogin,OauthLogin ]
+softdepend: [ PlaceholderAPI, PlayerTask, AuthMe, CatSeedLogin, OauthLogin ]
 description: 一个有点好用的玩家回归插件
 folia-supported: true
 commands:

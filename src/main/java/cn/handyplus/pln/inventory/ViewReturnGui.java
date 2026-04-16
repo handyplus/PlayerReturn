@@ -6,7 +6,6 @@ import cn.handyplus.lib.core.StrUtil;
 import cn.handyplus.lib.db.Page;
 import cn.handyplus.lib.inventory.HandyInventory;
 import cn.handyplus.lib.inventory.HandyInventoryUtil;
-import cn.handyplus.lib.util.BaseUtil;
 import cn.handyplus.lib.util.ItemStackUtil;
 import cn.handyplus.pln.constants.GuiTypeEnum;
 import cn.handyplus.pln.constants.ReturnConstants;
@@ -91,7 +90,7 @@ public class ViewReturnGui {
         for (ReturnPlayerTime record : records) {
             Integer index = guiIndexList.get(i++);
             List<String> newLoreList = ItemStackUtil.loreReplaceMap(loreList, this.replaceMap(record));
-            String newName = name.replace("${player_name}", BaseUtil.replaceChatColor(record.getPlayerName()));
+            String newName = name.replace("${player_name}", record.getPlayerName());
             ItemStack itemStack = ItemStackUtil.getItemStack(materialStr, newName, newLoreList);
             inventory.setItem(index, itemStack);
         }

@@ -27,10 +27,10 @@ public class ReturnUtil {
         String returnSignInRemind = BaseUtil.getLangMsg("returnSignInRemind");
         String returnShopRemind = BaseUtil.getLangMsg("returnShopRemind");
         String returnTaskRemind = BaseUtil.getLangMsg("returnTaskRemind");
-        RgbTextUtil message = RgbTextUtil.getInstance().init(returnRemind);
-        message.addExtra(RgbTextUtil.getInstance().init(returnSignInRemind).addClickCommand(ReturnConstants.BAR + ReturnConstants.SIGN_IN).build());
-        message.addExtra(RgbTextUtil.getInstance().init(returnShopRemind).addClickCommand(ReturnConstants.BAR + ReturnConstants.SHOP).build());
-        message.addExtra(RgbTextUtil.getInstance().init(returnTaskRemind).addClickCommand(ReturnConstants.BAR + ReturnConstants.TASK).build());
+        RgbTextUtil message = RgbTextUtil.init(returnRemind);
+        message.addExtra(RgbTextUtil.init(returnSignInRemind).addClickCommand(ReturnConstants.BAR + ReturnConstants.SIGN_IN));
+        message.addExtra(RgbTextUtil.init(returnShopRemind).addClickCommand(ReturnConstants.BAR + ReturnConstants.SHOP));
+        message.addExtra(RgbTextUtil.init(returnTaskRemind).addClickCommand(ReturnConstants.BAR + ReturnConstants.TASK));
         message.send(player);
     }
 

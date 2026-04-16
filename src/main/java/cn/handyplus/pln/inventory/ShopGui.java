@@ -5,7 +5,7 @@ import cn.handyplus.lib.core.CollUtil;
 import cn.handyplus.lib.db.Page;
 import cn.handyplus.lib.inventory.HandyInventory;
 import cn.handyplus.lib.inventory.HandyInventoryUtil;
-import cn.handyplus.lib.util.BaseUtil;
+import cn.handyplus.lib.util.ItemMetaUtil;
 import cn.handyplus.lib.util.ItemStackUtil;
 import cn.handyplus.pln.constants.GuiTypeEnum;
 import cn.handyplus.pln.constants.ReturnConstants;
@@ -110,7 +110,7 @@ public class ShopGui {
             }
             List<String> newLoreList = ItemStackUtil.loreReplaceMap(loreList, this.replaceMap(money, record, returnPlayerTime));
             ItemMeta itemMeta = ItemStackUtil.getItemMeta(itemStack);
-            itemMeta.setLore(BaseUtil.replaceChatColor(newLoreList));
+            ItemMetaUtil.setLore(itemMeta, newLoreList);
             itemStack.setItemMeta(itemMeta);
             inventory.setItem(index, itemStack);
             map.put(index, record.getId());
